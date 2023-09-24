@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'eclipse'
+}
+
+repositories {
+   mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(20)
+    }
+}
+
+application {
+    mainClass = 'r3qu13m.sr.SeargeRenamer'
+}
+
+version = '1.0.0'
+
+jar {
+	manifest.attributes('Main-Class': 'r3qu13m.sr.SeargeRenamer')
+   destinationDirectory = file("${projectDir}/releases")
+}
